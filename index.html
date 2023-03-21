@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -121,7 +122,19 @@
       #videoPage div.user p {
         font-weight: bold;
         margin-left: 10px;
-        margin-top: 23px;
+        margin-top: 10px;
+      }
+      
+      #videoPage button.subscribe {
+        width: 100px;
+        height: 30px;
+        border-radius: 40px;
+        border: none;
+        color: black;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-left: -180px;
+        cursor: pointer;
       }
       
     </style>
@@ -149,6 +162,7 @@
       <div class="user">
         <img src="https://media.licdn.com/dms/image/C560BAQF32SQfj83R1w/company-logo_200_200/0/1592262210552?e=2147483647&v=beta&t=FpwL5Yj534xsDcVgaSMwPkQ4rCMCx93wtJnKWatoTqM">
         <p>beaverton school district</p>
+        <button class="subscribe" id="subscribe" onclick="subscribe()">Subscribe</button>
       </div>
     </div>
     <script>
@@ -156,6 +170,12 @@
       function video() {
         document.getElementById('main').style.display = "none;"
         document.getElementById('videoPage').style.display = "block";
+      }
+      
+      function subscribe() {
+        document.getElementById('subscribe').innerHTML = 'Subscribed';
+        document.getElementById('subscribe').style.background = 'rgb(40,40,40)';
+        document.getElementById('subscribe').style.color = 'white';
       }
       
     </script>
